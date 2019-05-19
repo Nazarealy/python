@@ -1,2 +1,0 @@
-from sqeezer import Sqeezer
-
