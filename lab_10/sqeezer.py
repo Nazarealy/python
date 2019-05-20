@@ -2,7 +2,7 @@ class Sqeezer:
 
     staticProdaction = 100
 
-    def __init__(self, color = "%variant%", sqeezSpeed = 0, enginePower = 0, founder = "%variant%", price = 0, rating = 0.0, material = "%variant%"):
+    def __init__(self, color = "defolt", sqeezSpeed = 0, enginePower = 0, founder = "defolt", price = 0, rating = 0.0, material = "defolt"):
         self.color = color
         self.sqeezSpeed = sqeezSpeed
         self.enginePower = enginePower
@@ -15,7 +15,7 @@ class Sqeezer:
         print("%s deleted" % self.color)
 
     def __str__(self):
-        return "color: {0}, sqeezSpeed: {1}, enginePower: {2}founder: {3},\nprice: {4}, rating: {5}, material: {6}.\n".format(self.color, self.sqeezSpeed, 
+        return "color: {0},\nsqeezSpeed: {1},\nenginePower: {2}\nfounder: {3},\nprice: {4},\nrating: {5},\nmaterial: {6}.\n".format(self.color, self.sqeezSpeed, 
             self.enginePower, self.founder, self.price, self.rating, self.material)   
 
     @staticmethod
@@ -30,8 +30,8 @@ print(juicy)
 
 print("Total number of prodaction: " + str(Sqeezer.staticProdaction))
 Sqeezer.anotherstaticProdaction(50)
-print("Total number of prodaction: " + str(Sqeezer.staticProdaction))
-print()
+print("New number of prodaction: " + str(Sqeezer.staticProdaction))
+
     
 
     
