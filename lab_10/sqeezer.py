@@ -19,11 +19,18 @@ class Sqeezer:
             self.enginePower, self.founder, self.price, self.rating, self.material)   
 
     @staticmethod
+    def printHello():
+        print('hello') 
+
+    @staticmethod
     def anotherstaticProdaction(newstaticProdaction):
             Sqeezer.staticProdaction += newstaticProdaction
 
+
+
+
 defalt = Sqeezer()
-juicy = Sqeezer("red", 15, 220, "German", 15, 5, "plastick")
+juicy = Sqeezer("red", 15, 220, "German", 15, 5)
 
 print(defalt)
 print(juicy)
@@ -31,6 +38,8 @@ print(juicy)
 print("Total number of prodaction: " + str(Sqeezer.staticProdaction))
 Sqeezer.anotherstaticProdaction(50)
 print("New number of prodaction: " + str(Sqeezer.staticProdaction))
+
+    
 
     
 

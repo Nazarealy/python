@@ -18,13 +18,16 @@ class CutleryManager:
     def find_cutlery_by_material(self, material):
         return list(filter(lambda cutlery: cutlery.material == material, self.cutlery_list))
 
-cutlery = Cutlery(5, 200, "wood", "very")
-testFork = ForkCutlery(3, Sharpness_type.STRONG_STATE)
-testSpoon = SpoonCutlery(20, "red")
+#cutlery = Cutlery(3, 400, "metal", "very") - for general class
+testFork = ForkCutlery(4, 100, "wood", "much", 3, Sharpness_type.STRONG_STATE)
+testSpoon = SpoonCutlery(5, 400, "plastic", "many", 20, "red")
+testPlate = PlateCutlery(3, 300, "metal", "very", 5.5, "yellow", Structure_type.DEEP)
 
-cutleries = [cutlery, testFork, testSpoon]
+cutleries = [testPlate, testFork, testSpoon]
 manager = CutleryManager(cutleries)
 
 print(manager.sort_cutlery_list_by_price(False))
 print(manager.sort_cutlery_list_by_rating(True))
-print(manager.find_cutlery_by_material(5))
+print(manager.find_cutlery_by_material("wood"))
+
+
